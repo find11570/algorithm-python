@@ -15,24 +15,24 @@ Python 알고리즘 스터디입니다.
 <br/>
 ### 😎 팀원 소개
 <table>
-  <tr height="180px">
-    <th align="center" width="170px">
-      <a href="https://github.com/find11570"><img height="150px" width="150px" src="https://avatars.githubusercontent.com/u/74519181?v=4"/>
+  <tr height="150px">
+    <th align="center" width="150px">
+      <a href="https://github.com/find11570"><img height="130px" width="130px" src="https://avatars.githubusercontent.com/u/74519181?v=4"/>
     </th>
-    <th align="center" width="170px">
-      <a href="https://github.com/thbykk"><img height="150px" width="150px" src="https://avatars.githubusercontent.com/u/143820326?v=4"/></a>
+    <th align="center" width="150px">
+      <a href="https://github.com/thbykk"><img height="130px" width="130px" src="https://avatars.githubusercontent.com/u/143820326?v=4"/></a>
     </th>
-    <th align="center" width="170px">
-      <a href="https://github.com/betaa0528"><img height="150px" width="150px" src="https://avatars.githubusercontent.com/u/129808014?v=4"/></a>
+    <th align="center" width="150px">
+      <a href="https://github.com/betaa0528"><img height="130px" width="130px" src="https://avatars.githubusercontent.com/u/129808014?v=4"/></a>
     </th>
-    <th align="center" width="170px">
-      <a href="https://github.com/mimmmji"><img height="150px" width="150px" src="https://avatars.githubusercontent.com/u/117897253?v=4"/></a>
+    <th align="center" width="150px">
+      <a href="https://github.com/mimmmji"><img height="130px" width="130px" src="https://avatars.githubusercontent.com/u/117897253?v=4"/></a>
     </th>
-    <th align="center" width="170px">
-      <a href="https://github.com/lej8924"><img height="150px" width="150px" src="https://avatars.githubusercontent.com/u/71022086?v=4"/></a>
+    <th align="center" width="150px">
+      <a href="https://github.com/lej8924"><img height="130px" width="130px" src="https://avatars.githubusercontent.com/u/71022086?v=4"/></a>
     </th>
-    <th align="center" width="170px">
-      <a href="https://github.com/isj0228"><img height="150px" width="150px" src="https://avatars.githubusercontent.com/u/166700353?v=4"/></a>
+    <th align="center" width="150px">
+      <a href="https://github.com/isj0228"><img height="130px" width="130px" src="https://avatars.githubusercontent.com/u/166700353?v=4"/></a>
     </th>
   </tr>
   <tr>
