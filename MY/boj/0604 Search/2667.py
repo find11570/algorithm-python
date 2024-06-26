@@ -1,6 +1,8 @@
 import sys
 input=sys.stdin.readline
 N=int(input())
+
+#graph를 띄어쓰기없이 입력 받기 때문에 strip이용
 map=[list(map(int,input().strip())) for _ in range(N)]
 chk=[[False]*N for _ in range(N)]
 ans=[]
