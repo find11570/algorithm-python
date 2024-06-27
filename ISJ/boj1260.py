@@ -1,25 +1,49 @@
+import sys
 from collections import deque
 
-def is_prime(num):
-    if (num < 2):
-        return False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-            
-def DFS(N):
-    queue = deque([2,3,5,7])
+def BFS(graph, start):
+    visited = set()
+    queue = deque([start])
+    
     while queue:
-        current = queue.popleft()
-        if N == len(str(current)):
-            print(current)
-        
-        else :
-            for i in range (1,10):
-                value = current * 10 + i
-                if (is_prime(value)):
-                    queue.append(value)
+        node = queue.popleft()
+        if node not in visited:
+            visited.add(node)
+            print(node, end=' ')
+            for neighbor in sorted(graph[node]):
+                if neighbor not in visited:
+                    queue.append(neighbor)
+            
+def DFS(graph, start):
+    visited = set()
+    stack = [start]
+    
+    while stack:
+        node = stack.pop()
+        if node not in visited:
+            visited.add(node)
+            print(node, end=' ')
+            for neighbor in sorted(graph[node], reverse=True):
+                if neighbor not in visited:
+                    stack.append(neighbor)
 
-N = int(input())
-DFS(N)
+
+input = sys.stdin.read
+data = input().split()
+
+# Read N, M, V
+N, M, V = map(int, data[:3])
+
+graph = {i: [] for i in range(1, N + 1)}
+
+index = 3
+for _ in range(M):
+    a = int(data[index])
+    b = int(data[index + 1])
+    graph[a].append(b)
+    graph[b].append(a)
+    index += 2
+    
+DFS(graph, V)
+print()
+BFS(graph, V)
