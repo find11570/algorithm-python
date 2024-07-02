@@ -4,6 +4,7 @@ T = int(input())
 for _ in range(T):
     N = int(input())
     #지원자 성적 A,B성적순 나열 
+    #A,B성적에 따른 지원자 성적 정렬
     scores = sorted([list(map(int, input().split())) for _ in range(N)], key=lambda x: (x[0], x[1]))
 
     cnt = 0
