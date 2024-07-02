@@ -22,9 +22,9 @@ T = int(input())
 for _ in range(T):
     # 입력
     N = int(input())
-    applicant=sorted([list(map(int,input().split())) for _ in range(N)])
     # 정렬(서류 기준 오름차순)
-    applicant.sort()  # 서류 등수 순으로 오름차순 정렬
+    
+    applicant=sorted([list(map(int,input().split())) for _ in range(N)],key=lambda x:(x[0],x[1]))
     cut_line = applicant[0][1]  # 서류 1등의 면접 등수, 서류 등수로 이길 수 없으니 면접점수만 비교
 
     cnt = 1  # 합격자 수
