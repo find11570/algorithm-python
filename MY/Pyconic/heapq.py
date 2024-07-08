@@ -65,7 +65,7 @@ for _ in range(int(input())):
     else:
         heappush(heap, (abs(x), x))
 
-# n번째 최소값/최대값ㅠ
+# n번째 최소값/최대값
 # from heapq import nsmallest / from heapq import nlargest
 
 
