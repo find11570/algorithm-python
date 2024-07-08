@@ -47,14 +47,16 @@ nums = [4, 1, 7, 3, 8, 5]
 heap = []
 max_heap = []
 for num in nums:
-    heappush(heap,-num)  # 최소heap 의경우 heappush(heap,num)
-#   heappussh(heap,(-num,num))    
+    heappush(heap, -num)  # 최소heap 의경우 heappush(heap,num)
+#   heappussh(heap,(-num,num))
 while heap:
     max_heap.append(-heappop(heap))
 #   max_heap.append(heappop(heap)[1])
 print(max_heap)
 
-#절대값 heap
+# 절대값 heap
+ans = []
+heap = []
 for _ in range(int(input())):
     x = int(input())
     if x == 0:
@@ -64,6 +66,9 @@ for _ in range(int(input())):
             ans.append(heappop(heap)[1])
     else:
         heappush(heap, (abs(x), x))
+while heap:
+    ans.append(heappop(heap)[0])
+print("절대값 힙", ans)
 
 # n번째 최소값/최대값
 # from heapq import nsmallest / from heapq import nlargest
@@ -94,6 +99,8 @@ print(nlargest(3, [4, 1, 7, 3, 8, 5])[-1])
 print()
 
 # heap 정렬
+
+
 def heap_sort(nums):  # heap_sort(list)
     heap = []
     for num in nums:
