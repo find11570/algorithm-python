@@ -15,13 +15,16 @@ for _ in range(E):
     edge[B].append((C, A))
 # 결과값 0부터
 rs = 0
-heap = []
-heappush(heap,(0,1))
+heap = [(0, 1)]
 while heap:
-    e = heappop(heap)[1]
-    for w, e in edge[e]:
-        if chk[e] == False:
-            chk[e] = True
-            rs += w
-            heappush(heap, (w, e))
+    w, next_node = heappop(heap)
+    if chk[next_node] == False:
+        chk[next_node] = True
+        rs += w
+        for next_edge in edge[next_node]:
+            #(가중치,노드)
+            # next_edge[1]==노드
+            if chk[next_edge[1]] == False:
+                #(3,2)가 있는 상태에서 (2,3)이 push됨.
+                heappush(heap, next_edge)
 print(rs)
