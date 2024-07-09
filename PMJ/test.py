@@ -1,29 +1,45 @@
-from queue import PriorityQueue
+import sys
+sys.stdin = open("input.txt","r")
 
-INF = int(1e12)
-N = 5
+# 변수 선언 및 입력:
+n, m = 3,3
 
-adj_list = [[] for _ in range(N)]
-dist = [INF] * N
+edges = [(1, 2, 1),(2 ,3 ,2),(1 ,3 ,3)]
 
-# Create Adjacency List
-adj_list[0].append([1, 5]); adj_list[0].append([3, 1]);
-adj_list[1].append([2, 2])
-adj_list[2].append([4, 2])
-adj_list[3].append([1, 2]); adj_list[3].append([4, 7]);
+uf = [0] * (n + 1)
 
-# Execute Dijkstra Algorithm with standard(start) node '0'
-pq = PriorityQueue()
-pq.put([0, 0])
-dist[0] = 0
 
-while not pq.empty(): # pq.queue
-    cur_dist, cur_node = pq.get()
-    for adj_node, adj_dist in adj_list[cur_node]:
-        temp_dist = cur_dist + adj_dist
-        if temp_dist < dist[adj_node]:
-            pq.put([temp_dist, adj_node])
-            dist[adj_node] = temp_dist
+def find(x):
+    if uf[x] == x:
+        return x
+    uf[x] = find(uf[x])
+    return uf[x]
 
-# Print result
-print(dist)
+
+def union(x, y):
+    X, Y = find(x), find(y)
+    uf[X] = Y
+
+
+# cost 순으로 오름차순 정렬을 진행합니다.
+edges.sort(key=lambda x: x[2])
+
+# uf 값을 초기값을 적어줍니다.
+for i in range(1, n + 1):
+    uf[i] = i
+
+# cost가 낮은 간선부터 순서대로 보며
+# 아직 두 노드가 연결이 되어있지 않을 경우에만
+# 해당 간선을 선택하고 두 노드를 합쳐주면서
+# mst를 만들어줍니다.
+ans = 0
+for x, y, cost in edges:
+    # x, y가 연결되어 있지 않다면
+    if find(x) != find(y):
+        # 해당 간선은 MST에 속하는 간선이므로
+        # 답을 갱신해주고
+        # 두 노드를 연결해줍니다.
+        ans += cost
+        union(x, y)
+
+print(ans)
