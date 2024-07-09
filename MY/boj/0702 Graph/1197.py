@@ -14,6 +14,7 @@ for _ in range(E):
     edge[A].append((C, B))
     edge[B].append((C, A))
 # 결과값 0부터
+
 rs = 0
 heap = [(0, 1)]
 while heap:
