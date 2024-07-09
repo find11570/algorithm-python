@@ -24,8 +24,8 @@ while min_heap:
     visited[node] = True
     answer += cost
 
-    for neighbor,v in graph[node]:
-        if not visited[v]:
-            heapq.heappush(min_heap, (neighbor, v))
+    for vertex, neighbor in graph[node]:
+        if not visited[neighbor]:
+            heapq.heappush(min_heap, (vertex, neighbor))
 
 print(answer)
