@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 V, E = map(int, input().split())
 K=int(input())
-# 간선 ndex를 그대로 사용하기 위해 V+1
+# 간선 index를 그대로 사용하기 위해 V+1
 edge = [[] for _ in range(V+1)]
 # 각 거리 무한대로 초기화 
 dist=[INF]*(V+1)
