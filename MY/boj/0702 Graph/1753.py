@@ -19,7 +19,7 @@ dist[K]=0 # 시작점 가중치 0
 heap = [(0,K)] #가중치가 0인 시작노드
 while heap:
     w, v = heappop(heap)
-    if w!=dist[v]: #같지 않다면 이미 최소치로 수정이 되어있음.
+    if w!=dist[v]: #같지 않다면 이미 최소치로 수정이 되어있음
         continue
     for nw,nv in edge[v]:
         if dist[nv]>dist[v]+nw:
