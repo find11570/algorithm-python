@@ -5,9 +5,9 @@ INF=sys.maxsize
 # Floyd -> 1e6 가능 O(V^3)
 # 모든점에서 모든점 -> 플로이드 이용함
 #
-N=int(input())
+n=int(input())
 m=int(input())
-rs=[[INF]*(N+1) for _ in range(N+1)]
+rs=[[INF]*(n+1) for _ in range(n+1)]
 
 # 출발노드와 도착노드가 같을때 
 for i in range(1, n+1):
