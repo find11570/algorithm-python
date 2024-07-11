@@ -26,6 +26,6 @@ while min_heap:
 
     for vertex, neighbor in graph[node]:
         if not visited[neighbor]:
-            heapq.heappush(min_heap, (vertex, neighbor))
+            heapq.heappush(min_heap, ([vertex, neighbor])
 
 print(answer)
