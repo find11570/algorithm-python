@@ -10,7 +10,7 @@ def promising(num):
             return False
     return True
 
-def sol(y): #퀸 갯수 추가하기
+def sol(y): #다음 행에서 퀸 갯수 추가하기
     global cnt
     if y == N:  # 마지막 행에 다다르면 종료
         cnt += 1 #경우의수 +1
@@ -19,7 +19,7 @@ def sol(y): #퀸 갯수 추가하기
         for x in range(N): #N==4
             row[y] = x # (y,x)에 퀸 놓기
             if promising(y):# 그자리가 가능하면
-                sol(y+1) # 다음 갯수 추가
+                sol(y+1) # 다음 행으로
 
 
 sol(0)
