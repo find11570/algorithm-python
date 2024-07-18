@@ -16,7 +16,7 @@ def sol(y): #다음 행에서 퀸 갯수 추가하기
         cnt += 1 #경우의수 +1
         return
     else:
-        for x in range(N): #N==4
+        for x in range(N): #N
             row[y] = x # (y,x)에 퀸 놓기
             if promising(y):# 그자리가 가능하면
                 sol(y+1) # 다음 행으로
