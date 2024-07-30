@@ -4,7 +4,7 @@ cnt = 0
 # 퀸 공격조건 1 y2=y1, x2=x1, y2-y1=x2-x1(대각선) (행과 열끼리의 차이가 같을때)
 
 def promising(num):
-    for i in range(num):            #행과 열의 차이가 같을때
+    for i in range(num):#행과 열의 차이가 같을때
         if row[num] == row[i] or abs(row[num]-row[i]) == abs(num-i):
             # 같은 행이나 열에 있거나 대각선에 존재하면
             return False
