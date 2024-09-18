@@ -32,9 +32,6 @@ Python 알고리즘 스터디입니다.
       <a href="https://github.com/mimmmji"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/117897253?v=4"/></a>
     </th>
     <th align="center" width="120px">
-      <a href="https://github.com/gwonnnns"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/50737150?v=4"/></a>
-    </th>
-    <th align="center" width="120px">
       <a href="https://github.com/isj0228"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/166700353?v=4"/></a>
     </th>
   </tr>
@@ -53,9 +50,6 @@ Python 알고리즘 스터디입니다.
     </td>
     <td align="center" width="120px">
       <a href="https://github.com/mimmmji"><strong>박민지</strong></a>
-    </td>
-    <td align="center" width="120px">
-      <a href="https://github.com/gwonnnns"><strong>장형권</strong></a>
     </td>
     <td align="center" width="120px">
       <a href="https://github.com/isj0228"><strong>인성준</strong></a>
